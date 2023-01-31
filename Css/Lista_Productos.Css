@@ -1,0 +1,583 @@
+/* Nicolas Rojas - Todos los derechos reservado. */
+
+*{
+
+    font-family:Open Sans;
+
+}
+
+:Root{
+
+    --Color-Primario:#FFD4CE;
+    --Color-Secundario:#ffe5f0;
+
+}
+    
+.Header{
+
+    background-color:var(--Color-Primario);
+    display: flex;
+
+}
+
+.Nav{
+
+    flex-grow: 2;
+    min-width: 50px;
+    display: flex;
+    justify-content: end;
+    margin-right: 5em;
+    align-items: center;
+
+}
+
+.Div_Imagen{
+
+    display: flex;
+    flex-grow: 1;
+    margin: auto;
+
+}
+
+.Imagen_Logo{
+
+    width: 100%;
+    max-width: 300px;
+    margin: 1em 0 0 1em;
+
+}
+
+.Nav_Menu {
+
+    display: flex;
+    list-style: none;
+    
+}
+    
+.Nav_Menu_Link {
+    
+    color: #9C9C9C;
+    text-decoration:none;
+    display: block;
+    margin:30px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--Color-Secundario) ;
+    font-weight: bold;
+            
+}
+      
+.Nav_Toggle {
+        
+    color:#353535;
+    background: none;
+    border: none;
+    font-size: 6vmin;
+    cursor: pointer;
+    display: none;
+        
+}
+
+/* Media quare para el ajuste de el menu tipo hamburguesa */
+
+@media (max-width: 1270px) {
+
+    .Imagen_Logo{
+
+        margin: 0px;
+
+    }
+    
+    .Header{
+
+        display: flex;
+        height: 15vh;
+    
+    }
+
+    .Nav{
+
+        min-width: 0px;
+    
+    }
+
+    .Nav_Menu_Link {
+    
+        font-size: 20px;
+        color: #9C9C9C;
+        padding: 10px;
+        font-weight: bold;
+        position: relative;
+        top: 120px;
+        text-align: center;
+        background-color:var(--Color-Primario);
+    
+    }
+    
+    .Nav_Menu {
+    
+        display: block;
+        background-color: var(--Color-Secundario);
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height:100%;
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    
+    }
+      
+    .Nav_Menu_Item {
+    
+        line-height: 70px;
+
+    }
+
+    .Imagen-Hamburguesa{
+
+        width: 100vw;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        position: fixed;
+        background:var(--Color-Primario) ;
+
+    }
+
+    .Boton_Hamburguesa{
+
+        margin-right: 10px;
+
+    }
+
+    .Div_Imagen{
+
+        margin: 10px;
+
+    }
+    
+    .Nav_Toggle {
+    
+        display: flex;
+
+    }
+
+    .Nav_Menu_Visible {
+    
+        left: 0;
+        padding: 0% ;
+        
+    }
+      
+    .Nav_Toggle:focus:not(:focus-visible) { 
+    
+        outline: none;
+    
+    }
+    
+}
+
+/* Media quare para ajustar al tomaño responsive */
+
+@media(max-width:550px){
+
+    .Nav_Menu_Link{
+
+        font-size: 5vw;
+
+    }
+
+}
+
+/* Estilos de la seccion "Busqueda" */
+
+.Busqueda{
+
+    background:var(--Color-Secundario);
+    padding-bottom: 50px;
+
+}
+
+.Div_Input_Busqueda{
+
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    color: #EC7063;
+
+}
+
+.Div_Input{
+
+    display: flex;
+
+}
+
+.Input_Busqueda{
+
+    width: 400px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid #FFFCFC;
+    border-radius: 30px;
+    margin: 20px 0px;
+
+}
+
+/* Media quare para ajustar el tamaño del input de busqueda */
+
+@media(max-width:500px){
+
+    .Input_Busqueda{
+
+        width: 60vw;
+    
+    }
+
+}
+
+.Icono_Busqueda{
+
+    background: #EC7063;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px 0px;
+
+}
+
+/* Media quare para ajustar el tamaño del contenedor del input */
+
+@media (max-width:800px){
+
+    .Div_Input{
+
+        width: 50vw;
+        justify-content: start;
+    
+    }
+
+}
+
+.Div_Articulo{
+
+    background: var(--Color-Primario);
+    padding: 20px;
+    margin: 10px 20px;
+    -webkit-box-shadow: 5px 10px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 10px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 5px 10px 15px -6px rgba(0,0,0,0.75);
+    border-radius: 20px;
+
+}
+
+.Div_Articulo:hover{
+
+    padding:4px;
+    filter:opacity(0.9);
+    transform: scale(1,1)
+
+}
+
+.Lista_Productos{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.Imagenes_Articulo{
+
+    width: 100%;
+    max-width: 250px;
+    padding-top: 20px;  
+
+}
+
+.Articulo{
+
+    background-color:var(--Color-Primario);   
+    padding-top: 10px;  
+    text-align: center;
+
+}
+
+.Textos_Articulo{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Titulo_Producto{
+
+    color:#929292;
+    line-height:1,4;
+    margin-top: 5px; 
+
+}
+
+.Link_Producto{
+
+    text-decoration: none;
+
+}
+
+.Titulo_Producto:hover{
+
+    transform: scale(1.05);
+    color: #170200;
+
+}
+
+.Descripcion_Producto{
+
+    color:#929292;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration:none;
+    font-weight: 900;
+
+}
+
+.Descripcion_Producto:hover{
+
+    color: #170200;
+    transform: scale(1.05)
+
+}
+
+.Precio{
+
+    color:#929292;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight:1000;
+    display: block;
+
+}
+
+.Precio:hover{
+
+    color: #170200;
+    transform: scale(1.05)
+
+}
+
+/* Media quare para el ajuste del texto de la seccion "Productos" */
+
+@media (max-width: 400px) {
+
+    .Titulo_Producto{
+
+        margin: 5px;
+        font-size: 10vw;
+    
+    }
+    
+    .Descripcion_Producto{
+
+        margin: 5px;
+        font-size: 7vw;
+    
+    }
+    
+    .Precio{
+    
+        color:#929292;
+        margin-top: 10px;
+        font-size: 7vw;
+        line-height:1,4;
+    
+    }
+
+}
+
+.Filtro{
+
+    display: none;
+
+}
+
+/* Estilos del pie de pagina. */
+
+.Footer{
+
+    display: flex;
+    background-color:var(--Color-Secundario);
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.Div_Imagen_Footer{
+
+    display: flex;
+    flex-grow: 1;
+    margin: 10px auto auto 10px;
+
+}
+
+.Logo_Principal{
+
+    width: 100%;
+    max-width: 300px;
+ 
+}
+
+.Logos_Footer{
+
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.Div_Logos_Redes{
+
+    display: flex;
+    flex-basis: 625px;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.Logo_Footer{
+
+    width:50px;
+
+}
+
+.Div_Copy{
+
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    flex-basis: 625px;
+
+}
+
+.Texto_Copyright{
+
+    font-size:25px;
+    color:#505050;
+
+}
+
+.Links_Footer{
+
+    font-size: 20px;
+    text-decoration:none;
+    color:#505050;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+.Informaciones_Legales{
+
+    display: flex;
+    order: 1;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 10px;
+    color:#505050;
+
+}
+
+.Informacion_Legal{
+
+    font-size: 25px;
+    text-decoration:none;
+    font-weight:bolder;
+
+}
+
+/* Media quare para el tamaño de los textos en el footer */
+
+@media (max-width: 600px) {
+
+    .Logo_Footer{
+
+        width:7vw;
+    
+    }
+
+    .Texto_Copyright{
+
+        font-size:4vw;
+        min-width: 2vw;
+        
+    }
+
+    .Informacion_Legal{
+    
+        font-size: 4.5vw;
+        min-width: 2vw;
+    
+    }
+
+    .Links_Footer{
+
+        font-size: 4vw;
+        min-width: 2vw;
+    
+    }
+    
+}
+
+/* Media quare para el ajuste de los elementos en el footer */
+
+@media (max-width: 1270px) {
+
+    .Footer{
+
+        display: grid;
+        grid-template-columns:repeat(1,100%);  
+    
+    }
+
+    .Div_Imagen_Footer{
+
+        display: flex;
+        justify-content: start;
+
+    }
+
+    .Logos_Footer{
+
+        order: 2;
+        justify-content: center;
+
+    }
+
+    .Informaciones_Legales{
+
+        display: flex;
+        order: 1;
+        justify-content: start;
+        flex-grow: 1;
+    
+    }
+
+}
+
+/* ©Nicolas Rojas 2022 Todos los derechos reservados */

@@ -1,0 +1,674 @@
+/* Nicolas Rojas - Todos los derechos reservado. */
+
+*{
+
+    font-family:Open Sans;
+
+}
+
+:Root{
+
+    --Color-Primario:#FFD4CE;
+    --Color-Secundario:#ffe5f0;
+
+}
+    
+.Header{
+
+    background-color:var(--Color-Primario);
+    display: flex;
+
+}
+
+.Nav{
+
+    flex-grow: 2;
+    min-width: 50px;
+    display: flex;
+    justify-content: end;
+    margin-right: 5em;
+    align-items: center;
+
+}
+
+.Div_Imagen{
+
+    display: flex;
+    flex-grow: 1;
+    margin: auto;
+
+}
+
+.Imagen_Logo{
+
+    width: 100%;
+    max-width: 300px;
+    margin: 1em 0 0 1em;
+
+}
+
+.Nav_Menu {
+
+    display: flex;
+    list-style: none;
+    
+}
+    
+.Nav_Menu_Link {
+    
+    color: #9C9C9C;
+    text-decoration:none;
+    display: block;
+    margin:30px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--Color-Secundario) ;
+    font-weight: bold;
+            
+}
+      
+.Nav_Toggle {
+        
+    color:#353535;
+    background: none;
+    border: none;
+    font-size: 6vmin;
+    cursor: pointer;
+    display: none;
+        
+}
+
+/* Media quare para el ajuste de el menu tipo hamburguesa */
+
+@media (max-width: 1270px) {
+
+    .Imagen_Logo{
+
+        margin: 0px;
+
+    }
+    
+    .Header{
+
+        display: flex;
+    
+    }
+
+    .Nav{
+
+        min-width: 0px;
+    
+    }
+
+    .Nav_Menu_Link {
+
+        font-size: 25px;
+        color: #9C9C9C;
+        padding: 10px;
+        font-weight: bold;
+        position: relative;
+        top: 120px;
+        text-align: center;
+        background-color:var(--Color-Primario);
+    
+    }
+    
+    .Nav_Menu {
+    
+        display: block;
+        background-color: var(--Color-Secundario);
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height:100%;
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    
+    }
+      
+    .Nav_Menu_Item {
+    
+        line-height: 70px;
+
+    }
+
+    .Imagen-Hamburguesa{
+
+        width: 100vw;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        position: fixed;
+        background:var(--Color-Primario);
+
+    }
+
+    .Boton_Hamburguesa{
+
+        margin-right: 10px;
+
+    }
+
+    .Div_Imagen{
+
+        margin: 10px;
+
+    }
+    
+    .Nav_Toggle {
+    
+        display: flex;
+
+    }
+
+    .Nav_Menu_Visible {
+    
+        left: 0;
+        padding: 0% ;
+        
+    }
+      
+    .Nav_Toggle:focus:not(:focus-visible) { 
+    
+        outline: none;
+    
+    }
+    
+}
+
+/* Media quare para ajustar al tomaño responsive */
+
+@media(max-width:550px){
+
+    .Nav_Menu_Link{
+
+        font-size: 5vw;
+
+    }
+
+}
+
+/* Section "MasterCard" */
+
+.Tarjeta_MasterCard{
+
+    background: var(--Color-Secundario);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:15vh 0px 5vh 0px
+
+}
+
+.Div_Titulo_MasterCard{
+
+    padding-top: 100px;
+
+}
+
+.Titulo_Pagina{
+
+    color: #848484;
+
+}
+
+.Div_Tarjeta_MasterCard{
+
+    margin-top: 5vh;
+    background: var(--Color-Primario);
+    border-radius: 20px;
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap;
+    -webkit-box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+    box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+
+}
+
+.Titulo_Input{
+
+    font-size: 16px;
+    color: #848484;
+
+}
+
+.Input{
+
+    border-radius: 10px ;
+    width: 400px;
+    height: 50px;
+    margin: 20px 0px;
+    padding: 5px;
+    border-color: transparent;
+
+}
+
+.Input_Tipo_Calle{
+
+    border-radius: 10px ;
+    width: 200px;
+    padding: 5px;
+    height: 50px;
+    margin: 20px 0px;
+    border-color: transparent;
+
+}
+
+.Input_Calle{
+
+    border-radius: 10px ;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    margin: 20px 5px;
+    border-color: transparent;
+
+}
+
+input:focus{
+
+    border-color:#FF7575;
+    outline: 0;
+
+}
+
+select:focus{
+
+    border-color:#FF7575 ;
+    outline: 0;
+    
+}
+
+.Div_Boton{
+
+    display: flex;
+    justify-content: end;
+
+}
+
+.Boton_Continuar{
+
+    color: #848484;
+    text-decoration:none;
+    display: block;
+    margin:30px 0px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: var(--Color-Primario) ;
+    font-weight: bold;
+
+}
+
+/* Media quare para ajustar al responsive */
+
+@media(max-width:550px){
+
+    .Titulo_Pagina{
+
+        font-size: 7vw;
+
+    }
+
+    .Div_Formulario{
+
+        width:90vw;
+
+    }
+
+    .Titulo_Input{
+
+        font-size: 4vw;
+    
+    }
+    
+    .Input{
+    
+        width: 60vw;
+    
+    }
+    
+    .Input_Tipo_Calle{
+    
+        width: 20vw;
+    
+    }
+    
+    .Input_Calle{
+    
+        width: 10vw;
+
+    }
+
+    .Boton_Continuar{
+
+        padding: 20px 10vw;
+        margin: 30px 5vw;
+    
+    }
+
+}
+
+/* Section "Informacion del producto" */
+
+.Div_Producto{
+
+    align-self: center;
+    background: var(--Color-Primario);
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 500px;
+    padding-bottom: 30px;
+    margin: 20px 50px;
+    border-radius: 20px;
+    -webkit-box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+    box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+
+}
+
+.Div_Imagen_Titulo{
+
+    margin: 50px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.Imagen_Producto{
+
+    width: 100%;
+    max-width: 300px;
+    max-height: 250px;
+
+}
+
+.Titulo_Producto{
+
+    color: #848484;
+    margin-top: 20px;
+    opacity: 0.7;
+
+}
+
+hr{
+
+    width: 400px;   
+    opacity: 0.5;
+
+}
+
+.Div_Informacion{
+
+    width:500px ;
+    display: flex;
+    gap: 20px ;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 10px;
+
+}
+
+.Div_Texto_Informacion{
+
+    margin-top: 10px;
+    width: 250px;
+    
+}
+
+.Titulo_Informacion{
+
+    font-weight: 100;
+    color: #848484;
+
+}
+
+.Precio_Informacion{
+
+    font-weight: 100;
+    color: #848484;
+
+}
+
+.Div_Precio_Informacion{
+
+    text-align:right;
+    margin-top: 10px;
+
+}
+
+.Total{
+
+    font-weight: 100;
+    text-align:left;
+    width: 250px;
+
+} 
+
+/* Media quare para ajustar al responsive */
+
+@media (max-width: 550px) {
+
+    
+    hr{
+    
+        width: 80vw;   
+    
+    }
+
+    .Titulo_Producto{
+
+        font-size: 5vw;
+
+    }
+
+    .Div_Informacion{
+    
+        width:95vw ;
+    
+    }
+    
+    .Div_Texto_Informacion{
+    
+        margin-top: 10px;
+        width: 60vw;
+        
+    }
+    
+    .Titulo_Informacion{
+    
+        font-size: 4vw;
+    
+    }
+    
+    .Precio_Informacion{
+    
+        font-size: 4vw;
+    
+    }
+    
+    .Total{
+    
+        font-weight: 100;
+        text-align:left;
+        width: 60vw;
+    
+    } 
+
+}
+
+/* Estilos del pie de pagina. */
+
+.Footer{
+
+    display: flex;
+    background-color:var(--Color-Primario);
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.Div_Imagen_Footer{
+
+    display: flex;
+    flex-grow: 1;
+    margin: 10px auto auto 10px;
+
+}
+
+.Logo_Principal{
+
+    width: 100%;
+    max-width: 300px;
+ 
+}
+
+.Logos_Footer{
+
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.Div_Logos_Redes{
+
+    display: flex;
+    flex-basis: 625px;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.Logo_Footer{
+
+    width:50px;
+
+}
+
+.Div_Copy{
+
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    flex-basis: 625px;
+
+}
+
+.Texto_Copyright{
+
+    font-size:25px;
+    color:#505050;
+
+}
+
+.Links_Footer{
+
+    font-size: 20px;
+    text-decoration:none;
+    color:#505050;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+.Informaciones_Legales{
+
+    display: flex;
+    order: 1;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 10px;
+    color:#505050;
+
+}
+
+.Informacion_Legal{
+
+    font-size: 25px;
+    text-decoration:none;
+    font-weight:bolder;
+
+}
+
+/* Media quare para el tamaño de los textos en el footer */
+
+@media (max-width: 600px) {
+
+    .Logo_Footer{
+
+        width:7vw;
+    
+    }
+
+    .Texto_Copyright{
+
+        font-size:4vw;
+        min-width: 2vw;
+        
+    }
+
+    .Informacion_Legal{
+    
+        font-size: 4.5vw;
+        min-width: 2vw;
+    
+    }
+
+    .Links_Footer{
+
+        font-size: 4vw;
+        min-width: 2vw;
+    
+    }
+    
+}
+
+/* Media quare para el ajuste de los elementos en el footer */
+
+@media (max-width: 1270px) {
+
+    .Footer{
+
+        display: grid;
+        grid-template-columns:repeat(1,100%);  
+    
+    }
+
+    .Div_Imagen_Footer{
+
+        display: flex;
+        justify-content: start;
+
+    }
+
+    .Logos_Footer{
+
+        order: 2;
+        justify-content: center;
+
+    }
+
+    .Informaciones_Legales{
+
+        display: flex;
+        order: 1;
+        justify-content: start;
+        flex-grow: 1;
+    
+    }
+
+}
+
+/* ©Nicolas Rojas 2022 Todos los derechos reservados */

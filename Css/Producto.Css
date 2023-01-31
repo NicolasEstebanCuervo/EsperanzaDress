@@ -1,0 +1,1168 @@
+/* Nicolas Rojas - Todos los derechos reservado. */
+
+*{
+
+    font-family:Open Sans;
+
+}
+
+:Root{
+
+    --Color-Primario:#FFD4CE;
+    --Color-Secundario:#ffe5f0;
+
+}
+    
+.Header{
+
+    background-color:var(--Color-Primario);
+    display: flex;
+
+}
+
+.Nav{
+
+    flex-grow: 2;
+    min-width: 50px;
+    display: flex;
+    justify-content: end;
+    margin-right: 5em;
+    align-items: center;
+
+}
+
+.Div_Imagen{
+
+    display: flex;
+    flex-grow: 1;
+}
+
+.Imagen_Logo{
+
+    width: 100%;
+    max-width: 300px;
+    margin: 1em 0 0 1em;
+}
+
+.Nav_Menu {
+
+    display: flex;
+    list-style: none;
+    
+}
+    
+.Nav_Menu_Link {
+    
+    color: #9C9C9C;
+    text-decoration:none;
+    display: block;
+    margin:30px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--Color-Secundario) ;
+    font-weight: bold;
+            
+}
+      
+.Nav_Toggle {
+        
+    color:#353535;
+    background: none;
+    border: none;
+    font-size: 6vmin;
+    cursor: pointer;
+    display: none;
+        
+}
+
+/* Media quare para el ajuste de el menu tipo hamburguesa */
+
+@media (max-width: 1270px) {
+
+    .Imagen_Logo{
+
+        margin: 0px;
+
+    }
+    
+    .Header{
+
+        display: flex;
+        height: 15vh;
+    
+    }
+
+    .Nav{
+
+        min-width: 0px;
+    
+    }
+
+    .Nav_Menu_Link {
+    
+        font-size: 20px;
+        color: #9C9C9C;
+        padding: 10px;
+        font-weight: bold;
+        position: relative;
+        top: 120px;
+        text-align: center;
+        background-color:var(--Color-Primario);
+    
+    }
+    
+    .Nav_Menu {
+    
+        display: block;
+        background-color: var(--Color-Secundario);
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height:100%;
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    
+    }
+      
+    .Nav_Menu_Item {
+    
+        line-height: 70px;
+
+    }
+
+    .Imagen-Hamburguesa{
+
+        width: 100vw;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        position: fixed;
+        background:var(--Color-Primario) ;
+
+    }
+
+    .Boton_Hamburguesa{
+
+        margin-right: 10px;
+
+    }
+
+    .Div_Imagen{
+
+        margin: 10px;
+
+    }
+    
+    .Nav_Toggle {
+    
+        display: flex;
+
+    }
+
+    .Nav_Menu_Visible {
+    
+        left: 0;
+        padding: 0% ;
+        
+    }
+      
+    .Nav_Toggle:focus:not(:focus-visible) { 
+    
+        outline: none;
+    
+    }
+    
+}
+
+/* Media quare para ajustar al tomaño responsive */
+
+@media(max-width:550px){
+
+    .Nav_Menu_Link{
+
+        font-size: 5vw;
+
+    }
+
+}
+
+/* Estilos de la seccion "Producto" */
+
+.Producto{
+
+    background: #FFC6C6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding-bottom: 70px;
+
+}
+
+.Div_Imagenes_Producto{
+
+    max-width: 800px;
+    padding-top: 30px ;
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.Div_Icono_Largo{
+
+    grid-column: 2/2;
+    justify-self: center;
+
+}
+
+.Logo_EsperanzaDress_Producto{
+
+    width: 100%;
+    max-width: 400px;  
+    color: #9C9C9C;
+    padding: 0px 30px 0px 30px;
+    border-radius: 10px;
+    background-color: var(--Color-Secundario) ;
+
+}
+
+.Logo_EsperanzaDress_Producto:hover{
+
+    filter:opacity(0.9);
+    transform: scale(1.10);
+    -webkit-box-shadow: 15px 15px 51px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 15px 15px 51px -6px rgba(0,0,0,0.75);
+    box-shadow: 15px 15px 51px -6px rgba(0,0,0,0.75);
+
+}
+
+.Imagen_Pequeña{
+
+    width: 100%;
+    max-width: 190px;
+    margin-right: 5px;
+
+}
+
+.Imagen_Principal{
+
+    width: 100%;
+    max-width: 540px;
+    margin-top: 28px;
+
+}
+
+.Imagen_Pequeña_Horizontal{
+
+    width: 100%;
+    max-width: 190px;
+    margin-left: 2px;
+
+}
+
+.Lista_Imagenes_Pequeñas_Horizontal{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+
+/* Media quare para ajustar el orden de las imagenes */
+
+@media (max-width: 800px) {
+
+    .Imagen_Pequeña{
+
+        display: none;
+
+    }
+
+    .Imagen_Principal{
+
+        width: 100%;
+        max-width: 570px;
+
+    }
+
+}
+
+/* Estilos de la seccion "Informacion del producto" */
+
+.Informacion_Producto{
+
+    width: 400px;
+    padding: 20px;
+    margin-top:20px ;
+    text-align: center;
+    background:var(--Color-Primario);
+    border: 1px solid #E2D2D2;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 4px 70px -40px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 70px -40px rgba(0,0,0,0.75);
+    box-shadow: 3px 4px 70px -40px rgba(0,0,0,0.75);
+
+}
+
+.Titulo_Producto{
+
+    color: #848484;
+    font-size: 40px;
+
+}
+
+.Subtitulo_Producto{
+
+    color:#929292;
+    font-size: 25px;
+    margin: 5px;
+
+}
+
+.Precio_Producto{
+
+    color:#929292;
+    font-size: 25px;
+
+}
+
+.Logos_Metodos_Pago{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+
+.Logo_Nequi{
+
+    width: 100px;
+    
+}
+
+.Logo_Visa{
+
+    width: 100px;
+    height: 90px;
+
+}
+
+.Logo_MasterCard{
+
+    width: 70px;
+
+}
+
+.Mas_Informacion_Pagos{
+
+    color:#929292;
+    font-size: 25px;
+    font-weight:1000;
+    text-align: center;
+
+}
+
+.Logos_Envio{
+
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.Div_Envio{
+
+    padding: 2vh 0.5vw;
+
+}
+
+.Logo_Camion{
+
+    width: 60px;
+}
+
+.Titulo_Envio{
+
+    color:#929292;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.Subtitulo_Envio{
+
+    color:#929292;
+    font-size: 20px;
+    margin-top: 5px;
+
+}
+
+.Div_Devolucion{
+
+    padding: 1vh 2vw;
+
+}
+
+.Logos_Devolucion{
+
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.Logo_Devolucion{
+
+    width: 40px;
+
+}
+
+.Titulo_Devolucion{
+
+    color:#929292;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.Subtitulo_Devolucion{
+
+    color:#929292;
+    font-size: 20px;
+    margin-top: 5px;
+
+}
+
+.Link_Compra{
+
+    margin: 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em 0 ;
+
+}
+
+.Link_De_Compra{
+
+    font-size: 20px;
+    color: #9C9C9C;
+    text-decoration:none;
+    width: 100vw;
+    padding: 15px 100px;
+	font-weight: bold;
+    border-radius: 10px;
+    background-color: var(--Color-Secundario) ;
+    -webkit-box-shadow: 3px 4px 70px -40px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 70px -40px rgba(0,0,0,0.75);
+    box-shadow: 3px 4px 70px -40px rgba(0,0,0,0.75);
+
+}
+
+.Link_De_Compra:hover{
+
+    filter:opacity(0.9);
+    transform: scale(1.1);
+
+}
+
+/* Media queare para ajustar el tamaño de el texto */
+
+@media (max-width: 550px) {
+
+    .Informacion_Producto{
+
+        width: 100vw;
+    
+    }
+
+    .Titulo_Producto{
+
+        color: #848484;
+        margin: 5px;
+        font-size: 8vw;
+    
+    }
+    
+    .Subtitulo_Producto{
+    
+        color:#929292;
+        margin: 5px;
+        font-size: 7vw;
+    
+    }
+    
+    .Precio_Producto{
+    
+        color:#929292;
+        margin: 5px;
+        font-size: 6vw;
+
+    }
+
+    .Logo_Nequi{
+
+        width: 20vw;
+        
+    }
+    
+    .Logo_Visa{
+    
+        width: 20vw;
+        height: 90px;
+    
+    }
+    
+    .Logo_MasterCard{
+    
+        width: 15vw;
+    
+    }
+
+    .Mas_Informacion_Pagos{
+
+        font-size: 4vw;
+    
+    }
+    
+    .Logo_Camion{
+
+        width: 10vw;
+
+    }
+
+    .Titulo_Envio{
+
+        font-size: 5vw;
+
+    }
+
+    .Subtitulo_Envio{
+
+        font-size: 4vw;
+
+    }
+
+    .Div_Devolucion{
+
+        padding: 1vh 5vw;
+    
+    }
+
+    .Logo_Devolucion{
+
+        width: 8vw;
+
+    }
+
+    .Titulo_Devolucion{
+
+        font-size: 5vw;
+
+    }
+
+    .Subtitulo_Devolucion{
+
+        font-size: 4vw;
+
+    }
+
+    .Link_De_Compra{
+
+        font-size: 4vw;
+        color: #9C9C9C;
+        text-decoration:none;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 2vh 10vw;
+    
+    }
+
+}
+
+.Animacion_Div_Informacion_Entrada{
+
+    -webkit-animation: slide-in-fwd-center 1.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-fwd-center 1.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-10-23 20:52:44
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-fwd-center
+ * ----------------------------------------
+ */
+
+ @-webkit-keyframes slide-in-fwd-center {
+    0% {
+      -webkit-transform: translateZ(-1400px);
+              transform: translateZ(-1400px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-fwd-center {
+    0% {
+      -webkit-transform: translateZ(-1400px);
+              transform: translateZ(-1400px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+/* Estilos de la seccion "Ventana emergente". */
+
+.Ventana_Emergente{
+
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0px;
+    margin: 90px 27px;
+    background: #F2FFFA;
+    border-radius: 10px;
+    padding: 10px 0px 10px 0px;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+
+}
+
+/* Media quare para ajustar la posicion de la ventana emergente */
+
+@media (max-width:1270px){
+
+    .Ventana_Emergente{
+
+        margin-top: 120px;
+
+    }
+
+}
+
+.Boton_Cerrar{
+
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    height: 2rem;
+    border: 0px;
+    background: transparent;
+    gap: .65rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+}
+
+/* Media quare para ajustar el tamaño del boton de cerrado de la ventana emergente */
+
+@media(max-width:650px){
+
+    .Boton_Cerrar{
+
+        width: 5vw;
+        height: 5vh;
+        gap: .25rem;
+    
+    }
+
+}
+
+.Boton_Cerrar:hover div:first-child{
+
+    transform:rotate(50deg);
+
+}
+
+.Boton_Cerrar:hover div:nth-child(2){
+
+    opacity: 0;
+
+}
+
+.Boton_Cerrar:hover div:last-child{
+
+    transform:rotate(-50deg);
+
+}
+
+.Div_Boton_Cerrar{
+
+    background: black;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin:left;
+
+}
+
+.Opacidad{
+
+    opacity: 0;
+
+}
+
+.z-Index{
+
+    z-index: -1;
+
+}
+
+.Animacion_Div_Informacion_Salida{
+
+    -webkit-animation: fade-out 1s ease-out both;
+    animation: fade-out 1s ease-out both;
+
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-10-23 14:39:26
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-out
+ * ----------------------------------------
+ */
+
+ @-webkit-keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.Titulo_Ventana_Emergente{
+
+    color: #1C1C1C;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    margin: 0px 40px ;
+    
+}
+
+.Logos_Nequi{
+
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    margin: 20px 10px ;
+
+}
+
+.Logo_Nequi_Ventana_Emergente{
+
+    width: 100px;
+
+}
+
+.Titulo_Nequi{
+
+    color: #1C1C1C;
+    font-size: 35px;
+    margin-left: 2vw;
+
+}
+
+.Texto_Nequi_Ventana_Emergente{
+
+    color:#1C1C1C;
+    font-size: 25px;
+
+}
+
+.Logos_MasterCard_Y_Visa{
+
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    margin: 20px 10px ;
+
+}
+
+.MasterCard{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.Titulo_Tarjeta_Debito_MasterCard{
+
+    color: #1C1C1C;
+    font-size: 35px;
+    margin-left: 2vw;
+
+}
+
+.Logo_MasterCard_Ventana_Emergente{
+
+    width: 100px;
+
+}
+
+.Texto_MasterCard_Ventana_Emergente{
+
+    color:#1C1C1C;
+    font-size: 25px;
+    margin-top: 10px;
+
+}
+
+.Visa{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.Logo_Visa_Ventana_Emergente{
+
+    width: 100px;
+
+}
+
+.Titulo_Tarjeta_Debito_Visa{
+
+    color: #1C1C1C;
+    font-size: 35px;
+    margin-left: 2vw;
+
+}
+
+.Texto_Visa_Ventana_Emergente{
+
+    color:#1C1C1C;
+    font-size: 25px;
+
+}
+
+.Logos_Pse{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 20px;
+    margin: 20px 10px ;
+
+}
+
+.Titulo_Pse{
+
+    color: #1C1C1C;
+    font-size: 35px;
+    margin-left: 2vw;
+
+}
+
+.Logo_Pse_Ventana_Emergente{
+
+    width: 100px;
+
+}
+
+.Texto_Pse_Ventana_Emergente{
+    
+    color:#1C1C1C;
+    font-size: 25px;
+
+}
+
+/* Media quare para ajustar el tamaño del texto de la ventana emergente */
+
+@media (max-width: 550px) {
+
+    .Titulo_Ventana_Emergente{
+
+        font-size: 8vw;
+        
+    }
+    
+    .Logo_Nequi_Ventana_Emergente{
+    
+        width: 20vw;
+    
+    }
+    
+    .Titulo_Nequi{
+    
+        font-size: 6vw;
+    
+    }
+    
+    .Texto_Nequi_Ventana_Emergente{
+    
+        font-size: 5vw;
+    
+    }
+    
+    .Titulo_Tarjeta_Debito_MasterCard{
+    
+        color: #1C1C1C;
+        font-size: 6vw;
+    
+    }
+    
+    .Logo_MasterCard_Ventana_Emergente{
+    
+        width: 20vw;
+    
+    }
+    
+    .Texto_MasterCard_Ventana_Emergente{
+    
+        color:#1C1C1C;
+        font-size: 5vw;
+    
+    }
+    
+    .Logo_Visa_Ventana_Emergente{
+    
+        width: 20vw;
+    
+    }
+    
+    .Titulo_Tarjeta_Debito_Visa{
+    
+
+        font-size: 6vw;
+    
+    }
+    
+    .Texto_Visa_Ventana_Emergente{
+    
+        font-size: 5vw;
+    
+    }
+    
+    .Titulo_Pse{
+
+        font-size: 6vw;
+    
+    }
+    
+    .Logo_Pse_Ventana_Emergente{
+    
+        width: 20vw;
+    
+    }
+    
+    .Texto_Pse_Ventana_Emergente{
+        
+        font-size: 5vw;
+    
+    }
+
+}
+  
+/* Estilos del pie de pagina. */
+
+.Footer{
+
+    display: flex;
+    background-color:var(--Color-Primario);
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.Div_Imagen_Footer{
+
+    display: flex;
+    flex-grow: 1;
+    margin: 10px auto auto 10px;
+
+}
+
+.Logo_Principal{
+
+    width: 100%;
+    max-width: 300px;
+ 
+}
+
+.Logos_Footer{
+
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.Div_Logos_Redes{
+
+    display: flex;
+    flex-basis: 625px;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.Logo_Footer{
+
+    width:50px;
+
+}
+
+.Div_Copy{
+
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    flex-basis: 625px;
+
+}
+
+.Texto_Copyright{
+
+    font-size:25px;
+    color:#505050;
+
+}
+
+.Links_Footer{
+
+    font-size: 20px;
+    text-decoration:none;
+    color:#505050;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+.Informaciones_Legales{
+
+    display: flex;
+    order: 1;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 10px;
+    color:#505050;
+
+}
+
+.Informacion_Legal{
+
+    font-size: 25px;
+    text-decoration:none;
+    font-weight:bolder;
+
+}
+
+/* Media quare para el tamaño de los textos en el footer */
+
+@media (max-width: 600px) {
+
+    .Logo_Footer{
+
+        width:7vw;
+    
+    }
+
+    .Texto_Copyright{
+
+        font-size:4vw;
+        min-width: 2vw;
+        
+    }
+
+    .Informacion_Legal{
+    
+        font-size: 4.5vw;
+        min-width: 2vw;
+    
+    }
+
+    .Links_Footer{
+
+        font-size: 4vw;
+        min-width: 2vw;
+    
+    }
+    
+}
+
+/* Media quare para el ajuste de los elementos en el footer */
+
+@media (max-width: 1270px) {
+
+    .Footer{
+
+        display: grid;
+        grid-template-columns:repeat(1,100%);  
+        height: 50vh;
+    
+    }
+
+    .Div_Imagen_Footer{
+
+        display: flex;
+        justify-content: start;
+
+    }
+
+    .Logos_Footer{
+
+        order: 2;
+        justify-content: center;
+
+    }
+
+    .Informaciones_Legales{
+
+        display: flex;
+        order: 1;
+        justify-content: start;
+        flex-grow: 1;
+    
+    }
+
+}
+
+/* ©Nicolas Rojas 2022 Todos los derechos reservados */

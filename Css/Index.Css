@@ -1,0 +1,655 @@
+/* Nicolas Rojas - Todos los derechos reservado. */
+
+*{
+
+    font-family:Open Sans;
+
+}
+
+:Root{
+
+    --Color-Primario:#FFD4CE;
+    --Color-Secundario:#ffe5f0;
+
+}
+    
+.Header{
+
+    background-color:var(--Color-Primario);
+    display: flex;
+
+}
+
+.Nav{
+
+    flex-grow: 2;
+    min-width: 50px;
+    display: flex;
+    justify-content: end;
+    margin-right: 5em;
+    align-items: center;
+
+}
+
+.Div_Imagen{
+
+    display: flex;
+    flex-grow: 1;
+    margin: auto;
+
+}
+
+.Imagen_Logo{
+
+    width: 100%;
+    max-width: 300px;
+    margin: 1em 0 0 1em;
+
+}
+
+.Nav_Menu {
+
+    display: flex;
+    list-style: none;
+    
+}
+    
+.Nav_Menu_Link {
+    
+    color: #9C9C9C;
+    text-decoration:none;
+    display: block;
+    margin:30px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--Color-Secundario) ;
+    font-weight: bold;
+            
+}
+      
+.Nav_Toggle {
+        
+    color:#353535;
+    background: none;
+    border: none;
+    font-size: 6vmin;
+    cursor: pointer;
+    display: none;
+        
+}
+
+/* Media quare para el ajuste de el menu tipo hamburguesa */
+
+@media (max-width: 1270px) {
+
+    .Imagen_Logo{
+
+        margin: 0px;
+
+    }
+    
+    .Header{
+
+        display: flex;
+    
+    }
+
+    .Nav{
+
+        min-width: 0px;
+    
+    }
+
+    .Nav_Menu_Link {
+
+        font-size: 25px;
+        color: #9C9C9C;
+        padding: 10px;
+        font-weight: bold;
+        position: relative;
+        top: 120px;
+        text-align: center;
+        background-color:var(--Color-Primario);
+    
+    }
+    
+    .Nav_Menu {
+    
+        display: block;
+        background-color: var(--Color-Secundario);
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height:100%;
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    
+    }
+      
+    .Nav_Menu_Item {
+    
+        line-height: 70px;
+
+    }
+
+    .Imagen-Hamburguesa{
+
+        width: 100vw;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        position: fixed;
+        background:var(--Color-Primario);
+
+    }
+
+    .Boton_Hamburguesa{
+
+        margin-right: 10px;
+
+    }
+
+    .Div_Imagen{
+
+        margin: 10px;
+
+    }
+    
+    .Nav_Toggle {
+    
+        display: flex;
+
+    }
+
+    .Nav_Menu_Visible {
+    
+        left: 0;
+        padding: 0% ;
+        
+    }
+      
+    .Nav_Toggle:focus:not(:focus-visible) { 
+    
+        outline: none;
+    
+    }
+    
+}
+
+/* Media quare para ajustar al tomaño responsive */
+
+@media(max-width:550px){
+
+    .Nav_Menu_Link{
+
+        font-size: 5vw;
+
+    }
+
+}
+
+/* Seccion "Gallery" */
+
+.Div_Section_Gallery{
+
+    background-color: var(--Color-Secundario);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.Textos_Gallery{
+
+    flex-basis: 600px;
+    flex-grow: 2;
+    background-color: var(--Color-Primario);
+    padding:30px;
+    border-radius: 10px;
+    margin: 30px 0px 30px 60px ;
+    text-align: center;
+    -webkit-box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+    box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+
+}
+
+/* Media quare para ajustar el margin del texto. */
+
+@media (max-width: 1300px) {
+
+    .Div_Section_Gallery{
+
+        padding: 20vh 0px 5vh 0px;
+
+    }
+
+    .Textos_Gallery{
+
+        margin: 0px;
+
+    }
+
+}
+
+.Titulo_Gallery{
+
+    color: #848484;
+    margin: 5px;
+    font-size: 40px;
+
+}
+
+.Subtitulo_Gallery{
+
+    color:#929292;
+    font-size: 20px;
+    margin: 5px;
+
+}
+
+.Parrafo_Gallery{
+
+    color:#929292;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height:1,4;
+
+}
+
+/* Media quare para el ajuste del texto de la seccion "Gallery" */
+
+@media (max-width: 550px) {
+
+    .Textos_Gallery{
+
+        flex-grow: 1;
+        margin: 10px;
+        padding: 5vw;
+    
+    }
+
+    .Titulo_Gallery{
+
+        margin: 5px;
+        font-size: 8vw;
+    
+    }
+    
+    .Subtitulo_Gallery{
+
+        margin: 5px;
+        font-size: 7vw;
+    
+    }
+    
+    .Parrafo_Gallery{
+    
+        color:#929292;
+        margin-top: 10px;
+        font-size: 5vw;
+        line-height:1,4;
+    
+    }
+
+}
+
+.Gallery_Fotos{
+
+    flex-basis: 625px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;   
+    display: grid;
+    grid-template-columns:repeat(2,255px);  
+    margin: 30px;
+
+}
+
+/* Media quare para el orden de las imagenes*/
+
+@media screen and (max-width: 550px) {
+
+    .Gallery_Fotos{
+    
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);  
+    
+    }
+
+}
+
+.Foto_Gallery {
+
+    width: 100%;
+    max-width: 250px;
+
+}
+
+/* Seccion "Nuestro producto" */
+
+.Div_Section_Nuestro_Producto{
+
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--Color-Primario);
+    justify-content: center;
+
+}
+
+.Gallery_Nuestro_Producto{
+
+    flex-basis: 625px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;   
+    display: grid;
+    grid-template-columns:repeat(2,255px);  
+    margin: 30px;
+
+}
+
+.Textos_Nuestro_Producto{
+
+    flex-basis: 600px;
+    flex-grow: 2;
+    order: 1;
+    font-size: 25px;
+    background-color: var(--Color-Secundario);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 60px 30px 0px ;
+    text-align: center;
+    -webkit-box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+    box-shadow: 12px 12px 54px -23px rgba(0,0,0,0.75);
+
+}
+
+.Titulo_Nuestro_Producto{
+
+    color: #848484;
+    margin: 5px;
+    font-size: 40px;
+
+}
+
+.Subtitulo_Nuestro_Producto{
+
+    color:#929292;
+    font-size: 20px;
+    margin: 5px;
+
+}
+
+.Parrafo_Nuestro_Producto{
+
+    color:#929292;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height:1,4;
+
+}
+
+/* Media quare para el ajuste del orden de el texto */
+
+@media (max-width: 1300px) {
+
+    .Div_Section_Nuestro_Producto{
+
+        padding: 5vh 0px ;
+
+    }
+
+    .Textos_Nuestro_Producto{
+
+        order: 0;
+        margin: 0px;
+
+    }
+
+}
+
+.Foto_Nuestro_Producto {
+
+    width: 100%;
+    max-width: 250px;
+
+}
+
+/* Media quare para el orden de las imagenes  y el ajuste del texto*/
+
+@media (max-width: 550px) {
+
+    .Gallery_Nuestro_Producto{
+    
+        display: grid;
+        grid-template-columns:repeat(1,1fr);  
+    
+    }
+
+    .Foto_Link{
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .Foto_Nuestro_Producto{
+
+        width: 50vw;
+        max-width: 300px;
+        min-width: 50vw;
+
+    }
+
+    .Textos_Nuestro_Producto{
+
+        order: 0;
+        margin: 10px;
+        padding: 5vw;
+    
+    }
+
+    .Titulo_Nuestro_Producto{
+
+        color: #848484;
+        margin: 5px;
+        font-size: 8vw;
+    
+    }
+    
+    .Subtitulo_Nuestro_Producto{
+    
+        color:#929292;
+        margin: 5px;
+        font-size: 7vw;
+    
+    }
+    
+    .Parrafo_Nuestro_Producto{
+    
+        color:#929292;
+        margin-top: 10px;
+        font-size: 5vw;
+        line-height:1,4;
+    
+    }
+
+}
+
+/* Estilos del pie de pagina. */
+
+.Footer{
+
+    display: flex;
+    background-color:var(--Color-Secundario);
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.Div_Imagen_Footer{
+
+    display: flex;
+    flex-grow: 1;
+    margin: 10px auto auto 10px;
+
+}
+
+.Logo_Principal{
+
+    width: 100%;
+    max-width: 300px;
+ 
+}
+
+.Logos_Footer{
+
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.Div_Logos_Redes{
+
+    display: flex;
+    flex-basis: 625px;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.Logo_Footer{
+
+    width:50px;
+
+}
+
+.Div_Copy{
+
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    flex-basis: 625px;
+
+}
+
+.Texto_Copyright{
+
+    font-size:25px;
+    color:#505050;
+
+}
+
+.Links_Footer{
+
+    font-size: 20px;
+    text-decoration:none;
+    color:#505050;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+.Informaciones_Legales{
+
+    display: flex;
+    order: 1;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 10px;
+    color:#505050;
+
+}
+
+.Informacion_Legal{
+
+    font-size: 25px;
+    text-decoration:none;
+    font-weight:bolder;
+
+}
+
+/* Media quare para el tamaño de los textos en el footer */
+
+@media (max-width: 600px) {
+
+    .Logo_Footer{
+
+        width:7vw;
+    
+    }
+
+    .Texto_Copyright{
+
+        font-size:4vw;
+        min-width: 2vw;
+        
+    }
+
+    .Informacion_Legal{
+    
+        font-size: 4.5vw;
+        min-width: 2vw;
+    
+    }
+
+    .Links_Footer{
+
+        font-size: 4vw;
+        min-width: 2vw;
+    
+    }
+    
+}
+
+/* Media quare para el ajuste de los elementos en el footer */
+
+@media (max-width: 1270px) {
+
+    .Footer{
+
+        display: grid;
+        grid-template-columns:repeat(1,100%);  
+    
+    }
+
+    .Div_Imagen_Footer{
+
+        display: flex;
+        justify-content: start;
+
+    }
+
+    .Logos_Footer{
+
+        order: 2;
+        justify-content: center;
+
+    }
+
+    .Informaciones_Legales{
+
+        display: flex;
+        order: 1;
+        justify-content: start;
+        flex-grow: 1;
+    
+    }
+
+}
+
+/* ©Nicolas Rojas 2022 Todos los derechos reservados */
