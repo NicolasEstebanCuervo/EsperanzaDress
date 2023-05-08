@@ -8,14 +8,21 @@
 
 ---
 
-###  🧑 Sobre mi:
-   
-Soy una persona capacitada para estructurar un proyecto en base al conocimiento en herramientas de FrontEnd, algunas de las herramientas y lenguajes en las cuales me destacó son:
+### `💻 Proceso de instalacion usando git clone SSH`
 
-- Lenguaje y herramientas de diseño como lo son: HTML, Css, Bootstrap y lenguaje SASS.
+- Abra la terminal de su computador.
+- Entre al directorio de su preferencia usando (cd "nombre del directorio")
+- Si usted tiene una clave SSH ejecute el comando "git clone git@github.com:NicolasEstebanCuervo/News.git"
 
-- Lenguajes de programación y librerías cómo lo son: Javascript y React Js.
+### `💻 Proceso de instalacion usando git clone HTTPS`
 
-- Uso de herramientas de programación como lo son: Git y Github.
-   
+- Abra la terminal de su computador.
+- Entre al directorio de su preferencia usando (cd "nombre del directorio")
+- Si usted no tiene una clave SSH tambien puede usar el metodo git clone con HHTTPS. Solamente tiene que ejecutar el comando "git clone https://github.com/NicolasEstebanCuervo/News.git"
 
+### `💻 Proceso de instalacion usando el archivo .zip`
+
+- Descargue el repositorio en el apartado "<>Code" con la opcion "Download ZIP"
+- Dele click derecho y extraer aqui. Espere hasta que el repositorio se haya extraido correctamente.
+
+---
