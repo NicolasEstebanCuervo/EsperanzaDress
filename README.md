@@ -1,7 +1,7 @@
 <div id="Header" align="center">
 
    <img src="https://media.giphy.com/media/11PlhSPsXNvQoE/giphy.gif" width="300">   
-   <h1 align="center">EsperanzaDress 👗 - Trasladando a React</h1>
+   <h1 align="center">EsperanzaDress 👗 - Finalizado</h1>
    <h3 align="center">EsperanzaDress oficialmente es el primer proyecto grande que realizo siendo un programador FrontEnd, este proyecto esta pensado para       ser un boceto de una tienda web que comercia conjuntos y vestido para bebe.</h3>
 
 </div>
